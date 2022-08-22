@@ -4,8 +4,7 @@
   "description": "CRM Backend",
   "main": "index.js",
   "scripts": {
-    "build": "babel index.js -d dist",
-    "start": "npm run build && nodemon dist/index.js"
+    "start": "nodemon ./index.js --exec babel-node -e js"
   },
   "author": "Auri Gabriel",
   "license": "ISC",
