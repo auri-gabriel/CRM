@@ -35,6 +35,8 @@ Start the Express server:
 By default, the server will run on `http://localhost:4000/`.
 ### API Routes
 
+#### Contact Routes (Requires Authentication)
+
 | Method | Route                 | Description                        |
 |--------|----------------------|------------------------------------|
 | GET    | `/`                  | Running Message                    |
@@ -44,10 +46,19 @@ By default, the server will run on `http://localhost:4000/`.
 | PUT    | `/contact/:contactID` | Update a contact by ID             |
 | DELETE | `/contact/:contactID` | Delete a contact by ID             |
 
+#### Authentication Routes
+
+| Method | Route        | Description                |
+|--------|------------|----------------------------|
+| POST   | `/auth/register` | Register a new user       |
+| POST   | `/login`    | Authenticate a user and return a JWT |
+
 
 ## Dependencies
 - `express` - Web framework for Node.js
 - `mongoose` - ODM for MongoDB
 - `body-parser` - Middleware for parsing request bodies
 - `cors` - Middleware for handling CORS requests
+- `bcrypt` - Library for hashing passwords
+- `jsonwebtoken` - Library for generating and verifying JWT tokens
 
